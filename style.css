@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.hora {
+    font-size: 22vw; /* Tamanho da fonte ajustado */
+    font-weight: bold;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaçamento entre o texto e a logo */
+}
+
+.logo-text {
+    font-size: 3rem; /* Tamanho do texto "BAND CE" */
+    font-weight: bold;
+}
+
+.logo img {
+    width: 5vw; /* A logo ocupará uma parte maior da tela */
+    max-width: 350px; /* Limita o tamanho máximo da logo */
+    height: auto;
+}

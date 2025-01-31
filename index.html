@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Brasília - BAND CE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .data {
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="data" id="data"></div>
+        <div class="hora" id="hora"></div>
+        <div class="logo-container">
+            <div class="logo-text">BAND CE</div>
+            <div class="logo">
+                <img src="Band_logo_2018.png" alt="Logo da Band Ceará">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function atualizarDataHora() {
+            const agora = new Date();
+            const opcoesData = { 
+                weekday: 'long', 
+                day: '2-digit', 
+                month: 'long', 
+                year: 'numeric',
+                timeZone: 'America/Fortaleza' 
+            };
+            const opcoesHora = { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                hour12: false, 
+                timeZone: 'America/Fortaleza' 
+            };
+            document.getElementById('data').textContent = agora.toLocaleDateString('pt-BR', opcoesData);
+            document.getElementById('hora').textContent = agora.toLocaleTimeString('pt-BR', opcoesHora);
+        }
+
+        setInterval(atualizarDataHora, 1000);
+        atualizarDataHora();
+    </script>
+</body>
+</html>
