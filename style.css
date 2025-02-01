@@ -39,7 +39,7 @@ body, html {
 }
 
 .logo img {
-    width: 5vw; /* A logo ocupará uma parte maior da tela */
+    width: 4rem; /* A logo ocupará uma parte maior da tela */
     max-width: 350px; /* Limita o tamanho máximo da logo */
     height: auto;
 }
